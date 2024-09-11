@@ -45,8 +45,58 @@ code 3:
 
 code 4:
 ---------------------------------------------------------------------------------------------------
-id="chapter-1" class="accordion-collapse collpse-show" aria-labelledby="heading-1" data-bs-parent="#chapters"
+id="chapter-1" class="accordion-collapse collpse show" aria-labelledby="heading-1" data-bs-parent="#chapters"
 
 code 5:
 ---------------------------------------------------------------------------------------------------
+                    <div class="accordion" id="chapters">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
+                                    Chapter 2 - Your Second Web Page
+                                </button>
+                            </h2>
+                            <div id="chapter-2" class="accordion-collapse collapse" 
+                            aria-labelledby="heading-2" data-bs-parent="#chapters">
+                                <div class="accordion-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt non harum hic laudantium saepe ipsum aliquid odio alias? Repellendus tempore sapiente quam laborum. Rerum voluptatum eum aperiam ipsa cum!</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ex atque nihil sint magni obcaecati iusto doloribus inventore iure repudiandae, molestias quasi officia fugit consequuntur? Mollitia magni totam ipsa impedit?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="chapters">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-3">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-3">
+                                        Chapter 3 - Your Third Web Page
+                                    </button>
+                                </h2>
+                                <div id="chapter-3" class="accordion-collapse collapse" 
+                                aria-labelledby="heading-3" data-bs-parent="#chapters">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt non harum hic laudantium saepe ipsum aliquid odio alias? Repellendus tempore sapiente quam laborum. Rerum voluptatum eum aperiam ipsa cum!</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ex atque nihil sint magni obcaecati iusto doloribus inventore iure repudiandae, molestias quasi officia fugit consequuntur? Mollitia magni totam ipsa impedit?</p>
+                                    </div>
+                                </div>
+                            </div>        
+    
+                            <div class="accordion" id="chapters">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-4">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                        data-bs-target="#chapter-4" aria-expanded="false" aria-controls="chapter-4">
+                                            Chapter 4 - Your Fourth Web Page
+                                        </button>
+                                    </h2>
+                                    <div id="chapter-4" class="accordion-collapse collapse" 
+                                    aria-labelledby="heading-4" data-bs-parent="#chapters">
+                                        <div class="accordion-body">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt non harum hic laudantium saepe ipsum aliquid odio alias? Repellendus tempore sapiente quam laborum. Rerum voluptatum eum aperiam ipsa cum!</p>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ex atque nihil sint magni obcaecati iusto doloribus inventore iure repudiandae, molestias quasi officia fugit consequuntur? Mollitia magni totam ipsa impedit?</p>
+                                        </div>
+                                    </div>
+                                </div> 
 
