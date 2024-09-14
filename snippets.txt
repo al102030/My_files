@@ -28,6 +28,13 @@ code 2:
 
 code 3:
 ---------------------------------------------------------------------------------------------------
+
+            <div class="text-center">
+                <h2>Pricing Plans</h2>
+                <p class="lead text-muted">Choose a pricing Plan to suit you.</p>
+            </div>
+
+
                 <div class="col-8 col-lg-4 col-xl-3">
                     <div class="card border-0">
                         <div class="card-body text-center py-4">
@@ -76,10 +83,19 @@ code 3:
 
 code 4:
 ---------------------------------------------------------------------------------------------------
+
+
+            <div class="text-center">
+                <h2>Inside the Book...</h2>
+                <p class="lead text-muted">A quick glance at topics you'll learn.</p>
+            </div>
+
+
 id="chapter-1" class="accordion-collapse collpse show" aria-labelledby="heading-1" data-bs-parent="#chapters"
 
 code 5:
 ---------------------------------------------------------------------------------------------------
+
                     <div class="accordion" id="chapters">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-2">
