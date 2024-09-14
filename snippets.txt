@@ -43,6 +43,23 @@ code 3:
 
 
 
+                <div class="col-9 col-lg-4">
+                    <div class="card border-primary border-2">
+                        <div class="card-header text-center text-primary">Most Popular</div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title">Complete Edition</h4>
+                            <p class="lead card-subtitle">eBook Download And All Updates</p>
+                            <p class="display-5 my-4 text-primary fw-bold">$18.99</p>
+                            <p class="card-text mx-5 text-muted d-none d-lg-block">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut officia, facilis nulla veritatis eligendi aperiam.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
 code 4:
 ---------------------------------------------------------------------------------------------------
 id="chapter-1" class="accordion-collapse collpse show" aria-labelledby="heading-1" data-bs-parent="#chapters"
