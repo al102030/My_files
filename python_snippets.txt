@@ -6,3 +6,14 @@ db.insert("2GB DDR4 Ram", "Karen Johnson", "Newegg", "70")
 db.insert("24 inch Samsung Monitor", "Sam Smith", "Best Buy", "180")
 db.insert("NVIDIA RTX 2080", "Albert Kingston", "Newegg", "679")
 db.insert("600w Corsair PSU", "Karen Johnson", "Newegg", "130")
+
+
+#==================================================================================
+# Compiled with Pyinstaller
+
+# Windows
+pyinstaller --onefile --windowed part_manager.py
+
+# MacOS
+pyinstaller --onefile --add-binary='/System/Library/Frameworks/Tk.framework/Tk':'tk' --add-binary='/System/Library/Frameworks/Tcl.framework/Tcl':'tcl' part_manager.py
+
