@@ -1,0 +1,25 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 30,
+      "height": 180,
+      "height_unit": "cm"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 25,
+      "height": 165,
+      "height_unit": "cm"
+    },
+    {
+      "id": 3,
+      "name": "Mike Johnson",
+      "age": 40,
+      "height": 175,
+      "height_unit": "cm"
+    }
+  ]
+}
