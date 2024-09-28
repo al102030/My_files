@@ -4,22 +4,22 @@
       "id": 1,
       "name": "John Doe",
       "age": 30,
-      "height": 180,
-      "height_unit": "cm"
+      "weight": 75,
+      "height": 180
     },
     {
       "id": 2,
       "name": "Jane Smith",
       "age": 25,
-      "height": 165,
-      "height_unit": "cm"
+      "weight": 60,
+      "height": 165
     },
     {
       "id": 3,
       "name": "Mike Johnson",
       "age": 40,
-      "height": 175,
-      "height_unit": "cm"
+      "weight": 85,
+      "height": 175
     }
   ]
 }
