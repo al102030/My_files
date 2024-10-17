@@ -171,3 +171,13 @@ code 5:
                         </div>
                     </div>
                 </div>
+
+-------------------------------------------------------------------
+#tooltip JS code
+
+    <script>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+            new bootstrap.tooltip(t)
+        })
+    </script>
