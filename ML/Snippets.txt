@@ -1,0 +1,17 @@
+Let's import our datafile mpg.csv, which contains fuel economy data for 234 cars.
+
+* mpg : miles per gallon
+* class : car classification
+* cty : city mpg
+* cyl : # of cylinders
+* displ : engine displacement in liters
+* drv : f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+* fl : fuel (e = ethanol E85, d = diesel, r = regular, p = premium, c = CNG)
+* hwy : highway mpg
+* manufacturer : automobile manufacturer
+* model : model of car
+* trans : type of transmission
+* year : model year
+
+
+========================================================================
