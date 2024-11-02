@@ -17,3 +17,8 @@ Let's import our datafile mpg.csv, which contains fuel economy data for 234 cars
 ========================================================================
 
 people = ['Dr. Christopher Brooks', 'Dr. Kevyn Collins-Thompson', 'Dr. VG Vinod Vydiswaran', 'Dr. Daniel Romero']
+
+
+
+
+names=('Serial No','GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR','CGPA','Research', 'Chance of Admit')
