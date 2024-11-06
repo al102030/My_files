@@ -22,3 +22,6 @@ people = ['Dr. Christopher Brooks', 'Dr. Kevyn Collins-Thompson', 'Dr. VG Vinod 
 
 
 names=('Serial No','GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR','CGPA','Research', 'Chance of Admit')
+
+
+"Amir works diligently. Amir gets good grades. Our student Amir is succesful."
