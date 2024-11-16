@@ -25,3 +25,10 @@ names=('Serial No','GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR'
 
 
 "Amir works diligently. Amir gets good grades. Our student Amir is succesful."
+
+
+(columns={'GRE Score':'GRE Score', 'TOEFL Score':'TOEFL Score',
+                   'University Rating':'University Rating', 
+                   'SOP': 'Statement of Purpose','LOR': 'Letter of Recommendation',
+                   'CGPA':'CGPA', 'Research':'Research',
+                   'Chance of Admit':'Chance of Admit'})
