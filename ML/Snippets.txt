@@ -32,3 +32,9 @@ names=('Serial No','GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR'
                    'SOP': 'Statement of Purpose','LOR': 'Letter of Recommendation',
                    'CGPA':'CGPA', 'Research':'Research',
                    'Chance of Admit':'Chance of Admit'})
+
+
+
+columns_to_keep = ['STNAME','CTYNAME','BIRTHS2010','BIRTHS2011','BIRTHS2012','BIRTHS2013',
+                   'BIRTHS2014','BIRTHS2015','POPESTIMATE2010','POPESTIMATE2011',
+                   'POPESTIMATE2012','POPESTIMATE2013','POPESTIMATE2014','POPESTIMATE2015']
