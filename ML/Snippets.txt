@@ -38,3 +38,41 @@ names=('Serial No','GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR'
 columns_to_keep = ['STNAME','CTYNAME','BIRTHS2010','BIRTHS2011','BIRTHS2012','BIRTHS2013',
                    'BIRTHS2014','BIRTHS2015','POPESTIMATE2010','POPESTIMATE2011',
                    'POPESTIMATE2012','POPESTIMATE2013','POPESTIMATE2014','POPESTIMATE2015']
+
+
+
+df = pd.DataFrame({'A': [1, 1, 2, 3, 4],
+                   'B': [3, 6, 3, 8, 9],
+                   'C': ['a', 'b', 'c', 'd', 'e']})
+
+
+
+
+staff_df = pd.DataFrame([{'Name': 'Ali', 'Role': 'Director of HR'},
+                         {'Name': 'Amir', 'Role': 'Course liasion'},
+                         {'Name': 'Kiyan', 'Role': 'Grader'}])
+
+staff_df = staff_df.set_index('Name')
+
+student_df = pd.DataFrame([{'Name': 'Kiyan', 'School': 'Business'},
+                           {'Name': 'Abolfazl', 'School': 'Law'},
+                           {'Name': 'Amir', 'School': 'Engineering'}])
+
+student_df = student_df.set_index('Name')
+
+
+
+staff_df = pd.DataFrame([{'Name': 'Kelly', 'Role': 'Director of HR', 
+                          'Location': 'State Street'},
+                         {'Name': 'Sally', 'Role': 'Course liasion', 
+                          'Location': 'Washington Avenue'},
+                         {'Name': 'James', 'Role': 'Grader', 
+                          'Location': 'Washington Avenue'}])
+student_df = pd.DataFrame([{'Name': 'James', 'School': 'Business', 
+                            'Location': '1024 Billiard Avenue'},
+                           {'Name': 'Mike', 'School': 'Law', 
+                            'Location': 'Fraternity House #22'},
+                           {'Name': 'Sally', 'School': 'Engineering', 
+                            'Location': '512 Wilson Crescent'}])
+
+
