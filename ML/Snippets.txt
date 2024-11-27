@@ -98,3 +98,64 @@ df_2013 = pd.read_csv("MERGED2013_PP.csv")
 
 
 
+def get_state_region(x):
+    northeast = ['Connecticut', 'Maine', 'Massachusetts', 'New Hampshire', 
+                 'Rhode Island','Vermont','New York','New Jersey','Pennsylvania']
+    midwest = ['Illinois','Indiana','Michigan','Ohio','Wisconsin','Iowa',
+               'Kansas','Minnesota','Missouri','Nebraska','North Dakota',
+               'South Dakota']
+    south = ['Delaware','Florida','Georgia','Maryland','North Carolina',
+             'South Carolina','Virginia','District of Columbia','West Virginia',
+             'Alabama','Kentucky','Mississippi','Tennessee','Arkansas',
+             'Louisiana','Oklahoma','Texas']
+    west = ['Arizona','Colorado','Idaho','Montana','Nevada','New Mexico','Utah',
+            'Wyoming','Alaska','California','Hawaii','Oregon','Washington']
+    
+    if x in northeast:
+        return "Northeast"
+    elif x in midwest:
+        return "Midwest"
+    elif x in south:
+        return "South"
+    else:
+        return "West"
+
+
+
+def min_max(row):
+    data = row[['POPESTIMATE2010',
+                'POPESTIMATE2011',
+                'POPESTIMATE2012',
+                'POPESTIMATE2013',
+                'POPESTIMATE2014',
+                'POPESTIMATE2015']]
+    return pd.Series({'min': np.min(data), 'max': np.max(data)})
+
+
+
+def get_state_region(x):
+    northeast = ['Connecticut', 'Maine', 'Massachusetts', 'New Hampshire', 
+                 'Rhode Island','Vermont','New York','New Jersey','Pennsylvania']
+    midwest = ['Illinois','Indiana','Michigan','Ohio','Wisconsin','Iowa',
+               'Kansas','Minnesota','Missouri','Nebraska','North Dakota',
+               'South Dakota']
+    south = ['Delaware','Florida','Georgia','Maryland','North Carolina',
+             'South Carolina','Virginia','District of Columbia','West Virginia',
+             'Alabama','Kentucky','Mississippi','Tennessee','Arkansas',
+             'Louisiana','Oklahoma','Texas']
+    west = ['Arizona','Colorado','Idaho','Montana','Nevada','New Mexico','Utah',
+            'Wyoming','Alaska','California','Hawaii','Oregon','Washington']
+    
+    if x in northeast:
+        return "Northeast"
+    elif x in midwest:
+        return "Midwest"
+    elif x in south:
+        return "South"
+    else:
+        return "West"
+
+
+
+
+
