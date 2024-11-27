@@ -92,3 +92,9 @@ student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Akbari',
                             'School': 'Engineering'}])
 
 
+df_2011 = pd.read_csv("MERGED2011_PP.csv")
+df_2012 = pd.read_csv("MERGED2012_PP.csv")
+df_2013 = pd.read_csv("MERGED2013_PP.csv")
+
+
+
