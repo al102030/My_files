@@ -78,4 +78,17 @@ student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Hammond',
 
 
 
+staff_df = pd.DataFrame([{'First Name': 'Abolfazl', 'Last Name': 'Haghparasti', 
+                          'Role': 'Director of HR'},
+                         {'First Name': 'Ali', 'Last Name': 'Darvishi', 
+                          'Role': 'Course liasion'},
+                         {'First Name': 'Kiyan', 'Last Name': 'Rahmani', 
+                          'Role': 'Grader'}])
+student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Rahmani', 
+                            'School': 'Business'},
+                           {'First Name': 'Amir', 'Last Name': 'Heydari', 
+                            'School': 'Law'},
+                           {'First Name': 'Ali', 'Last Name': 'Darvishi', 
+                            'School': 'Engineering'}])
+
 
