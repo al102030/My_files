@@ -84,7 +84,7 @@ staff_df = pd.DataFrame([{'First Name': 'Abolfazl', 'Last Name': 'Haghparasti',
                           'Role': 'Course liasion'},
                          {'First Name': 'Kiyan', 'Last Name': 'Rahmani', 
                           'Role': 'Grader'}])
-student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Rahmani', 
+student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Akbari', 
                             'School': 'Business'},
                            {'First Name': 'Amir', 'Last Name': 'Heydari', 
                             'School': 'Law'},
