@@ -62,17 +62,20 @@ student_df = student_df.set_index('Name')
 
 
 
-staff_df = pd.DataFrame([{'First Name': 'Kelly', 'Last Name': 'Desjardins', 
+
+staff_df = pd.DataFrame([{'First Name': 'Abolfazl', 'Last Name': 'Desjardins', 
                           'Role': 'Director of HR'},
-                         {'First Name': 'Sally', 'Last Name': 'Brooks', 
+                         {'First Name': 'Ali', 'Last Name': 'Brooks', 
                           'Role': 'Course liasion'},
-                         {'First Name': 'James', 'Last Name': 'Wilde', 
+                         {'First Name': 'Kiyan', 'Last Name': 'Wilde', 
                           'Role': 'Grader'}])
-student_df = pd.DataFrame([{'First Name': 'James', 'Last Name': 'Hammond', 
+student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Hammond', 
                             'School': 'Business'},
-                           {'First Name': 'Mike', 'Last Name': 'Smith', 
+                           {'First Name': 'Amir', 'Last Name': 'Smith', 
                             'School': 'Law'},
-                           {'First Name': 'Sally', 'Last Name': 'Brooks', 
+                           {'First Name': 'Ali', 'Last Name': 'Brooks', 
                             'School': 'Engineering'}])
+
+
 
 
