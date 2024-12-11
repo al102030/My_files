@@ -157,12 +157,6 @@ def get_state_region(x):
 
 
 
-https://www.kaggle.com/datasets/rafaelaaltermann/listings-csv
-
-
-
-# Let's bring in pandas as normal
-import pandas as pd
 
 # Here’s an example. Lets create a dataframe of letter grades in descending order. We can also set an index
 # value and here we'll just make it some human judgement of how good a student was, like "excellent" or "good"
@@ -171,6 +165,22 @@ df=pd.DataFrame(['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D'],
                 index=['excellent', 'excellent', 'excellent', 'good', 'good', 'good', 
                        'ok', 'ok', 'ok', 'poor', 'poor'],
                columns=["Grades"])
-df
+
+
+
+my_categories=pd.CategoricalDtype(categories=['D', 'D+', 'C-', 'C', 'C+', 'B-', 'B', 'B+', 'A-', 'A', 'A+'], ordered=True)
+
+
+
+def create_category(ranking):
+    # Since the rank is just an integer, I'll just do a bunch of if/elif statements
+    if (ranking >= 1) & (ranking <= 100):
+        return "First Tier Top Unversity"
+    elif (ranking >= 101) & (ranking <= 200):
+        return "Second Tier Top Unversity"
+    elif (ranking >= 201) & (ranking <= 300):
+        return "Third Tier Top Unversity"
+    return "Other Top Unversity"
+
 
 
