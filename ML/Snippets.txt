@@ -157,5 +157,20 @@ def get_state_region(x):
 
 
 
+https://www.kaggle.com/datasets/rafaelaaltermann/listings-csv
+
+
+
+# Let's bring in pandas as normal
+import pandas as pd
+
+# Here’s an example. Lets create a dataframe of letter grades in descending order. We can also set an index
+# value and here we'll just make it some human judgement of how good a student was, like "excellent" or "good"
+
+df=pd.DataFrame(['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D'],
+                index=['excellent', 'excellent', 'excellent', 'good', 'good', 'good', 
+                       'ok', 'ok', 'ok', 'poor', 'poor'],
+               columns=["Grades"])
+df
 
 
