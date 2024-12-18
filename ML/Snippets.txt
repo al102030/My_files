@@ -184,3 +184,35 @@ def create_category(ranking):
 
 
 
+t1 = pd.Series(list('abc'), [pd.Timestamp('2016-09-01'), pd.Timestamp('2016-09-02'), 
+                             pd.Timestamp('2016-09-03')])
+
+t2 = pd.Series(list('def'), [pd.Period('2016-09'), pd.Period('2016-10'), 
+                             pd.Period('2016-11')])
+
+d1 = ['2 June 2013', 'Aug 29, 2014', '2015-06-26', '7/12/16']
+
+
+
+
+print(ttest_ind(early_finishers['assignment2_grade'], late_finishers['assignment2_grade']))
+print(ttest_ind(early_finishers['assignment3_grade'], late_finishers['assignment3_grade']))
+print(ttest_ind(early_finishers['assignment4_grade'], late_finishers['assignment4_grade']))
+print(ttest_ind(early_finishers['assignment5_grade'], late_finishers['assignment5_grade']))
+print(ttest_ind(early_finishers['assignment6_grade'], late_finishers['assignment6_grade']))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
