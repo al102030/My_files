@@ -204,7 +204,20 @@ print(ttest_ind(early_finishers['assignment6_grade'], late_finishers['assignment
 
 
 
-
+def test_columns(alpha=0.1):
+    # I want to keep track of how many differ
+    num_diff=0
+    # And now we can just iterate over the columns
+    for col in df1.columns:
+        # we can run out ttest_ind between the two dataframes
+        teststat,pval=ttest_ind(df1[col],df2[col])
+        # and we check the pvalue versus the alpha
+        if pval<=alpha:
+            # And now we'll just print out if they are different and increment the num_diff
+            print("Col {} is statistically significantly different at alpha={}, pval={}".format(col,alpha,pval))
+            num_diff=num_diff+1
+    # and let's print out some summary stats
+    print("Total number different was {}, which is {}%".format(num_diff,float(num_diff)/len(df1.columns)*100))
 
 
 
