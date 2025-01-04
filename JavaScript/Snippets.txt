@@ -8,3 +8,44 @@
     </div>
 
 
+
+
+        <!-- Select Input -->
+         <select name="priority" id="priority-input">
+          <option value="0">Select Priority</option>
+          <option value="1">Low</option>
+          <option value="2">Medium</option>
+          <option value="3">High</option>
+         </select>
+         <br>
+         <br>
+         <!-- CheckBox Input -->
+         <input type="checkbox"> Is it important?
+         <br>
+         <br>
+
+
+
+    <style>
+        body{
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        #container{
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+
+
