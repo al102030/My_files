@@ -1,0 +1,295 @@
+Let's import our datafile mpg.csv, which contains fuel economy data for 234 cars.
+
+* mpg : miles per gallon
+* class : car classification
+* cty : city mpg
+* cyl : # of cylinders
+* displ : engine displacement in liters
+* drv : f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+* fl : fuel (e = ethanol E85, d = diesel, r = regular, p = premium, c = CNG)
+* hwy : highway mpg
+* manufacturer : automobile manufacturer
+* model : model of car
+* trans : type of transmission
+* year : model year
+
+
+========================================================================
+
+people = ['Dr. Christopher Brooks', 'Dr. Kevyn Collins-Thompson', 'Dr. VG Vinod Vydiswaran', 'Dr. Daniel Romero']
+
+
+
+
+names=('Serial No','GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR','CGPA','Research', 'Chance of Admit')
+
+
+"Amir works diligently. Amir gets good grades. Our student Amir is succesful."
+
+
+(columns={'GRE Score':'GRE Score', 'TOEFL Score':'TOEFL Score',
+                   'University Rating':'University Rating', 
+                   'SOP': 'Statement of Purpose','LOR': 'Letter of Recommendation',
+                   'CGPA':'CGPA', 'Research':'Research',
+                   'Chance of Admit':'Chance of Admit'})
+
+
+
+columns_to_keep = ['STNAME','CTYNAME','BIRTHS2010','BIRTHS2011','BIRTHS2012','BIRTHS2013',
+                   'BIRTHS2014','BIRTHS2015','POPESTIMATE2010','POPESTIMATE2011',
+                   'POPESTIMATE2012','POPESTIMATE2013','POPESTIMATE2014','POPESTIMATE2015']
+
+
+
+df = pd.DataFrame({'A': [1, 1, 2, 3, 4],
+                   'B': [3, 6, 3, 8, 9],
+                   'C': ['a', 'b', 'c', 'd', 'e']})
+
+
+
+
+staff_df = pd.DataFrame([{'Name': 'Ali', 'Role': 'Director of HR'},
+                         {'Name': 'Amir', 'Role': 'Course liasion'},
+                         {'Name': 'Kiyan', 'Role': 'Grader'}])
+
+staff_df = staff_df.set_index('Name')
+
+student_df = pd.DataFrame([{'Name': 'Kiyan', 'School': 'Business'},
+                           {'Name': 'Abolfazl', 'School': 'Law'},
+                           {'Name': 'Amir', 'School': 'Engineering'}])
+
+student_df = student_df.set_index('Name')
+
+
+
+
+staff_df = pd.DataFrame([{'Name': 'Abolfazl', 'Role': 'Director of HR', 
+                          'Location': 'State Street'},
+                         {'Name': 'Ali', 'Role': 'Course liasion', 
+                          'Location': 'Washington Avenue'},
+                         {'Name': 'Kiyan', 'Role': 'Grader', 
+                          'Location': 'Washington Avenue'}])
+student_df = pd.DataFrame([{'Name': 'Kiyan', 'School': 'Business', 
+                            'Location': '1024 Billiard Avenue'},
+                           {'Name': 'Mike', 'School': 'Law', 
+                            'Location': 'Fraternity House #22'},
+                           {'Name': 'Ali', 'School': 'Engineering', 
+                            'Location': '512 Wilson Crescent'}])
+
+
+
+staff_df = pd.DataFrame([{'First Name': 'Abolfazl', 'Last Name': 'Haghparasti', 
+                          'Role': 'Director of HR'},
+                         {'First Name': 'Ali', 'Last Name': 'Darvishi', 
+                          'Role': 'Course liasion'},
+                         {'First Name': 'Kiyan', 'Last Name': 'Rahmani', 
+                          'Role': 'Grader'}])
+student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Akbari', 
+                            'School': 'Business'},
+                           {'First Name': 'Amir', 'Last Name': 'Heydari', 
+                            'School': 'Law'},
+                           {'First Name': 'Ali', 'Last Name': 'Darvishi', 
+                            'School': 'Engineering'}])
+
+
+df_2011 = pd.read_csv("MERGED2011_PP.csv")
+df_2012 = pd.read_csv("MERGED2012_PP.csv")
+df_2013 = pd.read_csv("MERGED2013_PP.csv")
+
+
+
+def get_state_region(x):
+    northeast = ['Connecticut', 'Maine', 'Massachusetts', 'New Hampshire', 
+                 'Rhode Island','Vermont','New York','New Jersey','Pennsylvania']
+    midwest = ['Illinois','Indiana','Michigan','Ohio','Wisconsin','Iowa',
+               'Kansas','Minnesota','Missouri','Nebraska','North Dakota',
+               'South Dakota']
+    south = ['Delaware','Florida','Georgia','Maryland','North Carolina',
+             'South Carolina','Virginia','District of Columbia','West Virginia',
+             'Alabama','Kentucky','Mississippi','Tennessee','Arkansas',
+             'Louisiana','Oklahoma','Texas']
+    west = ['Arizona','Colorado','Idaho','Montana','Nevada','New Mexico','Utah',
+            'Wyoming','Alaska','California','Hawaii','Oregon','Washington']
+    
+    if x in northeast:
+        return "Northeast"
+    elif x in midwest:
+        return "Midwest"
+    elif x in south:
+        return "South"
+    else:
+        return "West"
+
+
+
+def min_max(row):
+    data = row[['POPESTIMATE2010',
+                'POPESTIMATE2011',
+                'POPESTIMATE2012',
+                'POPESTIMATE2013',
+                'POPESTIMATE2014',
+                'POPESTIMATE2015']]
+    return pd.Series({'min': np.min(data), 'max': np.max(data)})
+
+
+
+def get_state_region(x):
+    northeast = ['Connecticut', 'Maine', 'Massachusetts', 'New Hampshire', 
+                 'Rhode Island','Vermont','New York','New Jersey','Pennsylvania']
+    midwest = ['Illinois','Indiana','Michigan','Ohio','Wisconsin','Iowa',
+               'Kansas','Minnesota','Missouri','Nebraska','North Dakota',
+               'South Dakota']
+    south = ['Delaware','Florida','Georgia','Maryland','North Carolina',
+             'South Carolina','Virginia','District of Columbia','West Virginia',
+             'Alabama','Kentucky','Mississippi','Tennessee','Arkansas',
+             'Louisiana','Oklahoma','Texas']
+    west = ['Arizona','Colorado','Idaho','Montana','Nevada','New Mexico','Utah',
+            'Wyoming','Alaska','California','Hawaii','Oregon','Washington']
+    
+    if x in northeast:
+        return "Northeast"
+    elif x in midwest:
+        return "Midwest"
+    elif x in south:
+        return "South"
+    else:
+        return "West"
+
+
+
+
+# Here’s an example. Lets create a dataframe of letter grades in descending order. We can also set an index
+# value and here we'll just make it some human judgement of how good a student was, like "excellent" or "good"
+
+df=pd.DataFrame(['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D'],
+                index=['excellent', 'excellent', 'excellent', 'good', 'good', 'good', 
+                       'ok', 'ok', 'ok', 'poor', 'poor'],
+               columns=["Grades"])
+
+
+
+my_categories=pd.CategoricalDtype(categories=['D', 'D+', 'C-', 'C', 'C+', 'B-', 'B', 'B+', 'A-', 'A', 'A+'], ordered=True)
+
+
+
+def create_category(ranking):
+    # Since the rank is just an integer, I'll just do a bunch of if/elif statements
+    if (ranking >= 1) & (ranking <= 100):
+        return "First Tier Top Unversity"
+    elif (ranking >= 101) & (ranking <= 200):
+        return "Second Tier Top Unversity"
+    elif (ranking >= 201) & (ranking <= 300):
+        return "Third Tier Top Unversity"
+    return "Other Top Unversity"
+
+
+
+t1 = pd.Series(list('abc'), [pd.Timestamp('2016-09-01'), pd.Timestamp('2016-09-02'), 
+                             pd.Timestamp('2016-09-03')])
+
+t2 = pd.Series(list('def'), [pd.Period('2016-09'), pd.Period('2016-10'), 
+                             pd.Period('2016-11')])
+
+d1 = ['2 June 2013', 'Aug 29, 2014', '2015-06-26', '7/12/16']
+
+
+
+
+print(ttest_ind(early_finishers['assignment2_grade'], late_finishers['assignment2_grade']))
+print(ttest_ind(early_finishers['assignment3_grade'], late_finishers['assignment3_grade']))
+print(ttest_ind(early_finishers['assignment4_grade'], late_finishers['assignment4_grade']))
+print(ttest_ind(early_finishers['assignment5_grade'], late_finishers['assignment5_grade']))
+print(ttest_ind(early_finishers['assignment6_grade'], late_finishers['assignment6_grade']))
+
+
+
+
+def test_columns(alpha=0.1):
+    # I want to keep track of how many differ
+    num_diff=0
+    # And now we can just iterate over the columns
+    for col in df1.columns:
+        # we can run out ttest_ind between the two dataframes
+        teststat,pval=ttest_ind(df1[col],df2[col])
+        # and we check the pvalue versus the alpha
+        if pval<=alpha:
+            # And now we'll just print out if they are different and increment the num_diff
+            print("Col {} is statistically significantly different at alpha={}, pval={}".format(col,alpha,pval))
+            num_diff=num_diff+1
+    # and let's print out some summary stats
+    print("Total number different was {}, which is {}%".format(num_diff,float(num_diff)/len(df1.columns)*100))
+
+
+
+
+slices = [59219, 55466, 47544, 36443, 35917, 31991, 27097, 23030, 20524, 18523, 18017, 7920, 7331, 7201, 5833]
+labels = ['JavaScript', 'HTML/CSS', 'SQL', 'Python', 'Java', 'Bash/Shell/PowerShell', 'C#', 'PHP', 'C++', 'TypeScript', 'C', 'Other(s):', 'Ruby', 'Go', 'Assembly']
+
+
+
+player1 = [8, 6, 5, 5, 4, 2, 1, 1, 0]
+player2 = [0, 1, 2, 2, 2, 4, 4, 4, 4]
+player3 = [0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+
+
+
+data = pd.read_csv('data.csv')
+ages = data['Age']
+dev_salaries = data['All_Devs']
+py_salaries = data['Python']
+js_salaries = data['JavaScript']
+
+plt.plot(ages, dev_salaries, color="#444444", linestyle="--", label="All Devs")
+plt.plot(ages, py_salaries, label="Python")
+
+
+data = pd.read_csv('data3.csv')
+ids = data['Responder_id']
+ages = data['Age']
+
+
+
+x = [5, 7, 8, 5, 6, 7, 9, 2, 3, 4, 4, 4, 2, 6, 3, 6, 8, 6, 4, 1]
+y = [7, 4, 3, 9, 1, 3, 2, 5, 2, 4, 8, 7, 1, 6, 4, 9, 7, 7, 5, 1]
+
+
+
+colors = [7, 5, 9, 7, 5, 7, 2, 5, 3, 7, 1, 2, 8, 1, 9, 2, 5, 6, 7, 5]
+
+sizes = [209, 486, 381, 255, 191, 315, 185, 228, 174,
+         538, 239, 394, 399, 153, 273, 293, 436, 501, 397, 539]
+
+
+
+
+data = pd.read_csv('data4.csv')
+view_count = data['view_count']
+likes = data['likes']
+ratio = data['ratio']
+
+plt.scatter(x, y, s=sizes, edgecolor='black', c=colors,
+           linewidth=1, alpha=0.75, cmap='Greens')
+
+plt.title('Trending YouTube Videos')
+plt.xlabel('View Count')
+plt.ylabel('Total Likes')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

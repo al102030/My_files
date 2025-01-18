@@ -1,0 +1,46 @@
+filename = 'pima-indians-diabetes.data.csv'
+
+with open(filename, 'r') as raw_data:
+    # reader = csv.DictReader(raw_data, delimiter=',', quoting=csv.QUOTE_NONE)
+    reader = csv.reader(raw_data, delimiter=',', quoting=csv.QUOTE_NONE)
+    next(reader) # Skip the header row
+    # data = np.array([list(row.values()) for row in reader], dtype=float)
+    data = np.array([row for row in reader], dtype=float)
+
+print(data.shape)
+
+=============================================================================
+
+filename = 'pima-indians-diabetes.data.csv'
+
+with open(filename, 'r') as raw_data:
+    data = np.loadtxt(raw_data, delimiter=",", skiprows=1)
+
+print(data.shape)
+
+
+=============================================================================
+
+filename = 'pima-indians-diabetes.data.csv'
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = read_csv(filename, names=names)
+print(data.shape)
+
+=============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
