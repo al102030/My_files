@@ -1,5 +1,5 @@
 
-names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+names = ['preg', 'gluc', 'pres', 'skin', 'insu', 'BMI', 'pedi', 'age', 'out']
 
 
 
