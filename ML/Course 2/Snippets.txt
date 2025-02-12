@@ -2,7 +2,14 @@
 names = ['preg', 'gluc', 'pres', 'skin', 'insu', 'BMI', 'pedi', 'age', 'out']
 
 
+filename = 'datasets/housing.csv'
+names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO',
+'B', 'LSTAT', 'MEDV', 'PPrice']
+dataframe = read_csv(filename) #, header=0)
 
+# dataframe.columns = names
+# dataframe.to_csv(filename, index=False, header=True)
+# dataframe.head(20)
 
 
 
