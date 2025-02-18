@@ -1,186 +1,291 @@
 src="https://via.placeholder.com/150"
 
+#####################################HTML###########################################
+  <h1>Header 1 Element</h1>
+  <div class="div1">
+    Div 1 Block Element
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+  </div>
+  <div class="div2">
+    Div 2 Block Element
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+  </div>
+  <h2>Header 2 Element</h2>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+h1 {
+    background-color: green;
+    color: yellow;
+}
 
-code 1 :
----------------------------------------------------------------------------------------------------
-class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle Navigation"
+div.div1 {
+    background-color: red;
+    color: white;
+}
+div.div2 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
 
-code 2:
----------------------------------------------------------------------------------------------------
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#topics" class="nav-link">About The Book</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#reviews" class="nav-link">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Get in Touch</a>
-                    </li>
-                    <li class="nav-item d-md-none">
-                        <a href="#pricing" class="nav-link">Pricing</a>
-                    </li>
-                    <li class="nav-item ms-2 d-none d-md-inline">
-                        <a href="#pricing" class="btn btn-secondary">Buy Now</a>
-                    </li>
-                </ul>
-            </div>
+h2 {
+    background-color: green;
+    color: yellow;
+}
 
+p {
+    border: solid green 2px;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-code 3:
----------------------------------------------------------------------------------------------------
+#####################################HTML###########################################
+  <p>P in the flow element</p>
 
-            <div class="text-center">
-                <h2>Pricing Plans</h2>
-                <p class="lead text-muted">Choose a pricing Plan to suit you.</p>
-            </div>
+  <div>Div absolute positioned element</div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+p {
+    background-color: red;
+    color: white;
+}
 
+div {
+    background-color: black;
+    color: white;
+    position: absolute;
 
-                <div class="col-8 col-lg-4 col-xl-3">
-                    <div class="card border-0">
-                        <div class="card-body text-center py-4">
-                            <h4 class="card-title">Starter Edition</h4>
-                            <p class="lead card-subtitle">eBook Download Only</p>
-                            <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
-                            <p class="card-text mx-5 text-muted d-none d-lg-block">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut officia, facilis nulla veritatis eligendi aperiam.
-                            </p>
-                            <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                        </div>
-                    </div>
+    top: 75px;
+    left: 150px;
 
-
-
-                <div class="col-9 col-lg-4">
-                    <div class="card border-primary border-2">
-                        <div class="card-header text-center text-primary">Most Popular</div>
-                        <div class="card-body text-center py-5">
-                            <h4 class="card-title">Complete Edition</h4>
-                            <p class="lead card-subtitle">eBook Download And All Updates</p>
-                            <p class="display-5 my-4 text-primary fw-bold">$18.99</p>
-                            <p class="card-text mx-5 text-muted d-none d-lg-block">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut officia, facilis nulla veritatis eligendi aperiam.
-                            </p>
-                            <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-8 col-lg-4 col-xl-3">
-                    <div class="card border-0">
-                        <div class="card-body text-center py-4">
-                            <h4 class="card-title">Ultimate Edition</h4>
-                            <p class="lead card-subtitle">Download, Update and Extras</p>
-                            <p class="display-5 my-4 text-primary fw-bold">$24.99</p>
-                            <p class="card-text mx-5 text-muted d-none d-lg-block">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut officia, facilis nulla veritatis eligendi aperiam.
-                            </p>
-                            <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-
-code 4:
----------------------------------------------------------------------------------------------------
-
-
-            <div class="text-center">
-                <h2>Inside the Book...</h2>
-                <p class="lead text-muted">A quick glance at topics you'll learn.</p>
-            </div>
-
-
-id="chapter-1" class="accordion-collapse collpse show" aria-labelledby="heading-1" data-bs-parent="#chapters"
-
-code 5:
----------------------------------------------------------------------------------------------------
-
-              <!-- Accordion -->
-                <div class="accordion" id="chapters">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading-1">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
-                               Chapter 1 - Habbiton
-                        </button>
-                        </h2>
-                        <div id="chapter-1" class="accordion-collapse collpse show" aria-labelledby="heading-1" data-bs-parent="#chapters">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero ab explicabo reprehenderit dolore, consequuntur excepturi corrupti iusto velit voluptatem quasi sit atque omnis aperiam voluptas officia dolores adipisci. Voluptates adipisci quos neque ab porro esse amet nobis, explicabo reprehenderit distinctio!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading-2">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
-                                Chapter 2 - Start of Journey
-                            </button>
-                        </h2>
-                        <div id="chapter-2" class="accordion-collapse collapse" 
-                        aria-labelledby="heading-2" data-bs-parent="#chapters">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt non harum hic laudantium saepe ipsum aliquid odio alias? Repellendus tempore sapiente quam laborum. Rerum voluptatum eum aperiam ipsa cum!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading-3">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-3">
-                                Chapter 3 - Grate War
-                            </button>
-                        </h2>
-                        <div id="chapter-3" class="accordion-collapse collapse" 
-                        aria-labelledby="heading-3" data-bs-parent="#chapters">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt non harum hic laudantium saepe ipsum aliquid odio alias? Repellendus tempore sapiente quam laborum. Rerum voluptatum eum aperiam ipsa cum!</p>
-                            </div>
-                        </div>
-                    </div>        
     
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading-4">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#chapter-4" aria-expanded="false" aria-controls="chapter-4">
-                                Chapter  - End of Darkness
-                            </button>
-                        </h2>
-                        <div id="chapter-4" class="accordion-collapse collapse" 
-                        aria-labelledby="heading-4" data-bs-parent="#chapters">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt non harum hic laudantium saepe ipsum aliquid odio alias? Repellendus tempore sapiente quam laborum. Rerum voluptatum eum aperiam ipsa cum!</p>
-                            </div>
-                        </div>
-                    </div> 
+    width: 250px;
+    height: 20px;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading-5">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#chapter-5" aria-expanded="false" aria-controls="chapter-5">
-                                Chapter 5 - Enter to the Valinor
-                            </button>
-                        </h2>
-                        <div id="chapter-5" class="accordion-collapse collapse" 
-                        aria-labelledby="heading-5" data-bs-parent="#chapters">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt non harum hic laudantium saepe ipsum aliquid odio alias? Repellendus tempore sapiente quam laborum. Rerum voluptatum eum aperiam ipsa cum!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+#####################################HTML###########################################
+  <div class="div1">DIV 1 FIXED</div>
+  <div class="div2">DIV 2 ABSOLUTE</div>
+  <div class="div3">DIV 3 ABSOLUTE</div>
+  <div class="div4">DIV 4 ABSOLUTE</div>
+  <div class="div5">DIV 5 ABSOLUTE</div>
+  <div class="div6">DIV 6 ABSOLUTE</div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+div.div1 {
+    background-color: red;
+    color: white;
 
--------------------------------------------------------------------
-#tooltip JS code
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
 
-    <script>
-        const tooltips = document.querySelectorAll('.tt')
-        tooltips.forEach(t => {
-            new bootstrap.tooltip(t)
-        })
-    </script>
+div.div2 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+
+div.div3 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}
+
+div.div4 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    position: absolute;
+    top: 90px;
+    left: 10px;
+}
+
+div.div5 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    position: absolute;
+    top: 120px;
+    left: 10px;
+}
+
+div.div6 {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    position: absolute;
+    top: 150px;
+    left: 10px;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
+  <div id="main">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt at quia iure saepe, voluptates exercitationem nemo, rerum distinctio quam doloribus nisi nulla excepturi unde reprehenderit. Sequi ratione odio veniam obcaecati ipsa aliquam sunt eligendi assumenda nihil voluptatem quae et provident perferendis, ea adipisci excepturi, non deleniti tempora perspiciatis eius. Placeat quae nesciunt, at quisquam obcaecati amet doloribus! Illum ducimus quae molestias mollitia nulla veritatis quod cumque exercitationem unde, minus nobis adipisci enim dolor tempore omnis quos in vitae minima. Quidem doloremque culpa ratione tenetur ex qui dignissimos! Incidunt quisquam placeat facilis quod nostrum expedita voluptate voluptates itaque? Natus provident in ut, explicabo illum fuga id qui maxime? Itaque fugiat eum ipsum molestiae cum error atque blanditiis est sequi voluptas ad distinctio tenetur recusandae fugit, nostrum ipsa laborum magnam earum hic maxime nam quidem illum. Blanditiis quisquam totam ducimus ex, delectus repellat dignissimos laborum, odit odio sit ipsum non sint molestiae officia, debitis hic! Veniam natus illum quibusdam ipsum laborum provident iste rerum, veritatis reiciendis a nostrum earum illo, eligendi aut, aperiam rem quia. Voluptatibus voluptate consequuntur voluptatem error quis et vel iste, consequatur sequi odit sunt ducimus, sapiente sed officiis, dolorum asperiores. Officiis inventore nesciunt ab dolor dolore debitis illo, odit exercitationem nulla esse id, dignissimos perspiciatis in? Necessitatibus ipsum eum molestiae culpa omnis aperiam expedita atque nihil autem distinctio, id ex ratione, ut dolor unde assumenda, modi aliquam! Commodi ducimus ipsum tempora assumenda laudantium, odit accusantium impedit doloremque fugiat! Ipsa temporibus expedita delectus quibusdam quos at, velit consectetur placeat tenetur ipsum magni officiis debitis dicta praesentium exercitationem sit officia pariatur. Deleniti repellendus laudantium veniam soluta et, illo sit velit magni perferendis facere ipsum cum eligendi laborum, dolore veritatis eos neque debitis animi suscipit. Minus rerum eligendi animi doloremque ipsa beatae ullam nam dignissimos nobis fugit, aut ipsum expedita.
+    </p>
+  </div>
+  <div id="main2">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum corrupti, deleniti exercitationem, ut incidunt natus qui rem ipsa vero perspiciatis magnam, saepe maxime obcaecati accusantium recusandae. Blanditiis aut quibusdam minus sapiente repudiandae qui iure hic inventore corporis alias unde nemo neque, consectetur ullam nobis magnam aliquid. Autem aspernatur, quam tempore error enim, voluptatibus modi beatae libero officia qui, incidunt consectetur dignissimos quia expedita. Vel fugit, illo, architecto maxime eaque ipsa praesentium minima cumque consequatur facilis accusantium et quam consectetur. Cum porro, veniam neque eum quidem id dolor nemo a alias nulla totam vel, non autem maiores, repellat quibusdam blanditiis voluptatum reprehenderit consectetur necessitatibus! Quam laudantium voluptatibus qui corrupti ipsam at saepe excepturi voluptas ducimus, officiis consequuntur sequi doloribus quis soluta quod officia error pariatur nulla dolor vero repudiandae eveniet suscipit cum. Perferendis quo expedita rerum deserunt voluptas eligendi quis amet sit culpa! Neque cumque esse velit nobis, et dolore qui molestias atque omnis possimus inventore voluptatum fugit voluptas harum nemo officiis distinctio beatae odit laudantium eos. Nobis laboriosam corrupti et fugiat doloremque. Culpa laboriosam sequi, dignissimos sint, nesciunt accusantium voluptates laudantium sunt explicabo dicta veniam quisquam provident praesentium reprehenderit dolores cum quia consequatur cupiditate ipsum perspiciatis. Doloremque ullam quo iusto, reprehenderit odit nihil molestiae sed, consectetur amet aspernatur blanditiis soluta expedita libero laudantium labore optio nulla quasi minus, dignissimos beatae autem itaque. Corporis eaque dignissimos quasi reiciendis sit. Aliquam nemo exercitationem tenetur minima enim neque iure delectus ipsa aspernatur nulla ullam vel nihil molestias fugiat distinctio, voluptatem error et eligendi sapiente beatae commodi. Quaerat nobis cupiditate doloribus deleniti enim, voluptas placeat modi vel excepturi nemo dicta beatae debitis accusantium distinctio minima labore iste, earum natus sed. Nulla asperiores illo commodi modi ipsa. Odit iste vero nisi ad veritatis aspernatur ab molestias fugit. Ea itaque necessitatibus deserunt. Cupiditate, dignissimos mollitia.</p>
+  </div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+body {
+    background-color: #9c9f84;
+    margin: 0px;
+}
+
+#main {
+    background-color: #e5d4d7;
+    border-radius: 5px;
+
+    padding: 10px;
+    margin: 20px;
+}
+
+#main2 {
+    background-color: green;
+    color: yellow;
+    border-radius: 5px;
+
+    padding: 10px;
+    margin: 20px;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
+  <div id="main">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt at quia iure saepe, voluptates exercitationem nemo, rerum distinctio quam doloribus nisi nulla excepturi unde reprehenderit. Sequi ratione odio veniam obcaecati ipsa aliquam sunt eligendi assumenda nihil voluptatem quae et provident perferendis, ea adipisci excepturi, non deleniti tempora perspiciatis eius. Placeat quae nesciunt, at quisquam obcaecati amet doloribus! Illum ducimus quae molestias mollitia nulla veritatis quod cumque exercitationem unde, minus nobis adipisci enim dolor tempore omnis quos in vitae minima. Quidem doloremque culpa ratione tenetur ex qui dignissimos! Incidunt quisquam placeat facilis quod nostrum expedita voluptate voluptates itaque? Natus provident in ut, explicabo illum fuga id qui maxime? Itaque fugiat eum ipsum molestiae cum error atque blanditiis est sequi voluptas ad distinctio tenetur recusandae fugit, nostrum ipsa laborum magnam earum hic maxime nam quidem illum. Blanditiis quisquam totam ducimus ex, delectus repellat dignissimos laborum, odit odio sit ipsum non sint molestiae officia, debitis hic! Veniam natus illum quibusdam ipsum laborum provident iste rerum, veritatis reiciendis a nostrum earum illo, eligendi aut, aperiam rem quia. Voluptatibus voluptate consequuntur voluptatem error quis et vel iste, consequatur sequi odit sunt ducimus, sapiente sed officiis, dolorum asperiores. Officiis inventore nesciunt ab dolor dolore debitis illo, odit exercitationem nulla esse id, dignissimos perspiciatis in? Necessitatibus ipsum eum molestiae culpa omnis aperiam expedita atque nihil autem distinctio, id ex ratione, ut dolor unde assumenda, modi aliquam! Commodi ducimus ipsum tempora assumenda laudantium, odit accusantium impedit doloremque fugiat! Ipsa temporibus expedita delectus quibusdam quos at, velit consectetur placeat tenetur ipsum magni officiis debitis dicta praesentium exercitationem sit officia pariatur. Deleniti repellendus laudantium veniam soluta et, illo sit velit magni perferendis facere ipsum cum eligendi laborum, dolore veritatis eos neque debitis animi suscipit. Minus rerum eligendi animi doloremque ipsa beatae ullam nam dignissimos nobis fugit, aut ipsum expedita.
+    </p>
+  </div>
+  <div class="button">
+    <a href="">Home</a>
+  </div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+body {
+    background-color: #9c9f84;
+}
+
+#main {
+    background-color: #e5d4d7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.button {
+    background: #e7e7e7;
+    border: 1px solid;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    font: 700 13px verdana;
+    height: 30px;
+    width: 80px;
+    line-height: 28px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    float: left;
+}
+ 
+a:hover {
+    color: #000;
+    background-color: #dadada;
+}
+
+ul {
+    width: auto;
+    padding: 0;
+    margin: 12 0 0 8;
+    list-style-type: none;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
+  <div id="main">
+    <p>
+      <img src="images/gandolf.jpg">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt at quia iure saepe, voluptates exercitationem nemo, rerum distinctio quam doloribus nisi nulla excepturi unde reprehenderit. Sequi ratione odio veniam obcaecati ipsa aliquam sunt eligendi assumenda nihil voluptatem quae et provident perferendis, ea adipisci excepturi, non deleniti tempora perspiciatis eius. Placeat quae nesciunt, at quisquam obcaecati amet doloribus! Illum ducimus quae molestias mollitia nulla veritatis quod cumque exercitationem unde, minus nobis adipisci enim dolor tempore omnis quos in vitae minima. Quidem doloremque culpa ratione tenetur ex qui dignissimos! Incidunt quisquam placeat facilis quod nostrum expedita voluptate voluptates itaque? Natus provident in ut, explicabo illum fuga id qui maxime? Itaque fugiat eum ipsum molestiae cum error atque blanditiis est sequi voluptas ad distinctio tenetur recusandae fugit, nostrum ipsa laborum magnam earum hic maxime nam quidem illum. Blanditiis quisquam totam ducimus ex, delectus repellat dignissimos laborum, odit odio sit ipsum non sint molestiae officia, debitis hic! Veniam natus illum quibusdam ipsum laborum provident iste rerum, veritatis reiciendis a nostrum earum illo, eligendi aut, aperiam rem quia. Voluptatibus voluptate consequuntur voluptatem error quis et vel iste, consequatur sequi odit sunt ducimus, sapiente sed officiis, dolorum asperiores. Officiis inventore nesciunt ab dolor dolore debitis illo, odit exercitationem nulla esse id, dignissimos perspiciatis in? Necessitatibus ipsum eum molestiae culpa omnis aperiam expedita atque nihil autem distinctio, id ex ratione, ut dolor unde assumenda, modi aliquam! Commodi ducimus ipsum tempora assumenda laudantium, odit accusantium impedit doloremque fugiat! Ipsa temporibus expedita delectus quibusdam quos at, velit consectetur placeat tenetur ipsum magni officiis debitis dicta praesentium exercitationem sit officia pariatur. Deleniti repellendus laudantium veniam soluta et, illo sit velit magni perferendis facere ipsum cum eligendi laborum, dolore veritatis eos neque debitis animi suscipit. Minus rerum eligendi animi doloremque ipsa beatae ullam nam dignissimos nobis fugit, aut ipsum expedita.maxime nam quidem illum. Blanditiis quisquam totam ducimus ex, delectus repellat dignissimos laborum, odit odio sit ipsum non sint molestiae officia, debitis hic! Veniam natus illum quibusdam ipsum laborum provident iste rerum, veritatis reiciendis a nostrum earum illo, eligendi aut, aperiam rem quia. Voluptatibus voluptate consequuntur voluptatem error quis et vel iste, consequatur sequi odit sunt ducimus, sapiente sed officiis, dolorum asperiores. Officiis inventore nesciunt ab dolor dolore debitis illo, odit exercitationem nulla esse id, dignissimos perspiciatis in? Necessitatibus ipsum eum molestiae culpa omnis aperiam expedita atque nihil autem distinctio, id ex ratione, ut dolor unde assumenda, modi aliquam! Commodi ducimus ipsum tempora assumenda laudantium, odit accusantium impedit doloremque fugiat! Ipsa temporibus expedita delectus quibusdam quos at, velit consectetur placeat tenetur ipsum magni officiis debitis dicta praesentium exercitationem sit officia pariatur. Deleniti repellendus laudantium veniam soluta et, illo sit velit magni perferendis facere ipsum cum eligendi laborum, dolore veritatis eos neque debitis animi suscipit. Minus rerum eligendi animi doloremque ipsa beatae ullam nam dignissimos nobis fugit, aut
+    </p>
+  </div>
+
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+body {
+    background-color: #9c9f84;
+    margin: 0;
+}
+
+#main {
+    background-color: #e5d4d7;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.image {
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
+  <div id="main1">
+    <p>A paragraph</p>
+    <p>A paragraph</p>
+    <p>A paragraph</p>
+    <p id="par">A paragraph</p>
+  </div>
+
+  <div id="main2">
+    <p>A paragraph</p>
+    <p>A paragraph</p>
+    <p>A paragraph</p>
+    <div id="square"></div>
+</div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+body {
+    background-color: #9c9f84;
+    margin: 0;
+}
+
+#main1 {
+    background-color: #e5d4d7;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+#main2 {
+    background-color: #e5d4d7;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#par {
+    color: red;
+}
+
+#square {
+    background: red;
+    width: 25px;
+    height: 25px;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
