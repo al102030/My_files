@@ -711,6 +711,194 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 #####################################HTML###########################################
+    <p id="text1">some text in paragraph</p>
+    <br><br><br>
+    <p id="text2">some text in paragraph</p>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#text1 {
+    text-align: center;
+    font: bold 60px Helvetica;
+    text-shadow: 3px 3px 5px orange,
+                 6px 6px 10px blue;
+}
+
+#text2 {
+    text-align: center;
+    font: bold 60px Helvetica;
+    text-shadow: 6px 6px 10px rgba(0,0,255,0.3) ;
+}
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
+<div id="box1"></div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#box1 {
+    width: 600px;
+    height: 200px;
+    background-color: lightgray;
+    /* box-shadow: 15px 15px 5px 7px orange; */
+    box-shadow:inset 0 0 5px black;
+}
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
+  <div class="container-grid">
+    <div class="section1">Section 1</div>
+    <div class="section2">Section 2</div>
+    <div class="section3">Section 3</div>
+    <div class="section4">Section 4</div>
+    <div class="section5">Section 5</div>
+    <div class="section6">Section 6</div>
+    <div class="section7">Section 7</div>
+    <div class="section8">Section 8</div>
+    <div class="section9">Section 9</div>
+    <div class="section10">Section 10
+      <div class="nestedgrid">
+        
+        <p>Section 10a</p>
+        <p>Section 10b</p>
+        <p>Section 10c</p>
+
+      </div>
+
+    </div>
+    <div class="section11">Section 11</div>
+    <div class="section12">Section 12</div>
+  </div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 100px;
+}
+
+.nestedgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 150px;
+    padding: 10px;
+}
+
+p {
+    border: 2px solid white;
+}
+
+.section1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section2 {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section3 {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section4 {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section5 {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section6 {
+    grid-column: 3;
+    grid-row: 2;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section7 {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section8 {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: deeppink;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section9 {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: darkslateblue;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.section10 {
+    grid-column: 1 / 4;
+    grid-row: 4 / 6;
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section11 {
+    grid-column: 1 / 4;
+    grid-row: 6 / 8;
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section12 {
+    grid-column: 4 / 6;
+    grid-row: 1 / 8;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
 
 #####################################HTML###########################################
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
