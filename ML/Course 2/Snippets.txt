@@ -12,7 +12,7 @@ dataframe = read_csv(filename) #, header=0)
 # dataframe.head(20)
 
 
-
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 
 
 
