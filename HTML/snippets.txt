@@ -1,4 +1,4 @@
-
+ 
 #####################################HTML###########################################
   <h1>Header 1 Element</h1>
   <div class="div1">
@@ -895,6 +895,59 @@ p {
     color: white;
     text-align: center;
     font-size: 20px;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+#####################################HTML###########################################
+  <div class="flexcontainer">
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+    <div class="box4">Box 4</div>
+  </div>
+#####################################HTML###########################################
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+.flexcontainer {
+    display: flex;
+    flex-direction:row;
+}
+
+.box1 {
+    background-color:gold;
+    text-align: center;
+    color: white;
+    width: 100px;
+    height: 100px;
+    height: 100px;margin: 10px;
+    padding: 5px;
+}
+.box2 {
+    background-color:cornflowerblue;
+    text-align: center;
+    color: white;
+    width: 100px;
+    height: 100px;
+    height: 100px;margin: 10px;
+    padding: 5px;
+}
+.box3 {
+    background-color:chartreuse;
+    text-align: center;
+    color: white;
+    width: 100px;
+    height: 100px;margin: 10px;
+    padding: 5px;
+}
+.box4 {
+    background-color:deeppink;
+    text-align: center;
+    color: white;
+    width: 100px;
+    height: 100px;
+    height: 100px;margin: 10px;
+    padding: 5px;
+    /* order: -1; */
+    /* flex-grow: 2; */
 }
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$CSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
