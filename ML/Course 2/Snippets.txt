@@ -16,28 +16,16 @@ names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 
 
 
-
-from sklearn.model_selection import KFold
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import GridSearchCV
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import Lasso
-from sklearn.linear_model import ElasticNet
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.svm import SVR
-
-
-# Spot-Check Algorithms
-models = []
-models.append(('LR', LinearRegression()))
-models.append(('LASSO', Lasso()))
-models.append(('EN', ElasticNet()))
-models.append(('KNN', KNeighborsRegressor()))
-models.append(('CART', DecisionTreeRegressor()))
-models.append(('SVR', SVR()))
-
-
+# evaluate each model in turn
+results = []
+names = []
+for name, model in models:
+    kfold = KFold(n_splits=num_folds, shuffle=True, random_state=seed)
+    cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+    results.append(cv_results)
+    names.append(name)
+    msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print(msg)
 
 
 
