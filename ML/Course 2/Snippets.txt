@@ -17,8 +17,25 @@ names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 
 
 
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import ElasticNet
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.svm import SVR
 
 
+# Spot-Check Algorithms
+models = []
+models.append(('LR', LinearRegression()))
+models.append(('LASSO', Lasso()))
+models.append(('EN', ElasticNet()))
+models.append(('KNN', KNeighborsRegressor()))
+models.append(('CART', DecisionTreeRegressor()))
+models.append(('SVR', SVR()))
 
 
 
