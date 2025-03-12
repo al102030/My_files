@@ -1,21 +1,27 @@
-
-names = ['preg', 'gluc', 'pres', 'skin', 'insu', 'BMI', 'pedi', 'age', 'out']
-
-
-filename = 'datasets/housing.csv'
-names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO',
-'B', 'LSTAT', 'MEDV', 'PPrice']
-dataframe = read_csv(filename) #, header=0)
-
-# dataframe.columns = names
-# dataframe.to_csv(filename, index=False, header=True)
-# dataframe.head(20)
+from sklearn.preprocessing import StandardScaler
 
 
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-
-
-
-
+# Standardize the dataset
+pipelines = []
+pipelines.append(('ScaledLR', Pipeline([('Scaler', StandardScaler()),('LR',
+LinearRegression())])))
+pipelines.append(('ScaledLASSO', Pipeline([('Scaler', StandardScaler()),('LASSO',
+Lasso())])))
+pipelines.append(('ScaledEN', Pipeline([('Scaler', StandardScaler()),('EN',
+ElasticNet())])))
+pipelines.append(('ScaledKNN', Pipeline([('Scaler', StandardScaler()),('KNN',
+KNeighborsRegressor())])))
+pipelines.append(('ScaledCART', Pipeline([('Scaler', StandardScaler()),('CART',
+DecisionTreeRegressor())])))
+pipelines.append(('ScaledSVR', Pipeline([('Scaler', StandardScaler()),('SVR', SVR())])))
+results = []
+names = []
+for name, model in pipelines:
+    kfold = KFold(n_splits=num_folds, shuffle=True, random_state=seed)
+    cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+    results.append(cv_results)
+    names.append(name)
+    msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print(msg)
 
 
