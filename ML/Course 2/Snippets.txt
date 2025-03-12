@@ -1,15 +1,26 @@
-# KNN Algorithm tuning
-scaler = StandardScaler().fit(X_train)
-rescaledX = scaler.transform(X_train)
-k_values = numpy.array([1,3,5,7,9,11,13,15,17,19,21])
-param_grid = dict(n_neighbors=k_values)
-model = KNeighborsRegressor()
-kfold = KFold(n_splits=num_folds, shuffle=True, random_state=seed)
-grid = GridSearchCV(estimator=model, param_grid=param_grid, scoring=scoring, cv=kfold)
-grid_result = grid.fit(rescaledX, Y_train)
-print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
-means = grid_result.cv_results_['mean_test_score']
-stds = grid_result.cv_results_['std_test_score']
-params = grid_result.cv_results_['params']
-for mean, stdev, param in zip(means, stds, params):
-    print("%f (%f) with: %r" % (mean, stdev, param))
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.ensemble import ExtraTreesRegressor
+from sklearn.ensemble import AdaBoostRegressor
+
+
+
+# ensembles
+ensembles = []
+ensembles.append(('ScaledAB', Pipeline([('Scaler', StandardScaler()),('AB',
+AdaBoostRegressor())])))
+ensembles.append(('ScaledGBM', Pipeline([('Scaler', StandardScaler()),('GBM',
+GradientBoostingRegressor())])))
+ensembles.append(('ScaledRF', Pipeline([('Scaler', StandardScaler()),('RF',
+RandomForestRegressor())])))
+ensembles.append(('ScaledET', Pipeline([('Scaler', StandardScaler()),('ET',
+ExtraTreesRegressor())])))
+results = []
+names = []
+for name, model in ensembles:
+    kfold = KFold(n_splits=num_folds, shuffle=True, random_state=seed)
+    cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+    results.append(cv_results)
+    names.append(name)
+    msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print(msg)
