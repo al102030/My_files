@@ -47,54 +47,97 @@ df = pd.DataFrame({'A': [1, 1, 2, 3, 4],
 
 
 
+======================================================================================
 
-staff_df = pd.DataFrame([{'Name': 'Ali', 'Role': 'Director of HR'},
-                         {'Name': 'Amir', 'Role': 'Course liasion'},
-                         {'Name': 'Kiyan', 'Role': 'Grader'}])
+staff_df = pd.DataFrame([{'Name': 'Ali', 'Role': 'Manager'},
+                         {'Name': 'ArvinA', 'Role': 'Lecturer'},
+                         {'Name': 'Yasin', 'Role': 'Gradner'}])
 
 staff_df = staff_df.set_index('Name')
 
-student_df = pd.DataFrame([{'Name': 'Kiyan', 'School': 'Business'},
-                           {'Name': 'Abolfazl', 'School': 'Law'},
-                           {'Name': 'Amir', 'School': 'Engineering'}])
+
+
+student_df = pd.DataFrame([{'Name': 'Sadra', 'School': 'Business'},
+                           {'Name': 'ArvinB', 'School': 'Law'},
+                           {'Name': 'Zahra', 'School': 'Engineering'}])
 
 student_df = student_df.set_index('Name')
 
 
 
 
-staff_df = pd.DataFrame([{'Name': 'Abolfazl', 'Role': 'Director of HR', 
-                          'Location': 'State Street'},
-                         {'Name': 'Ali', 'Role': 'Course liasion', 
-                          'Location': 'Washington Avenue'},
-                         {'Name': 'Kiyan', 'Role': 'Grader', 
-                          'Location': 'Washington Avenue'}])
-student_df = pd.DataFrame([{'Name': 'Kiyan', 'School': 'Business', 
-                            'Location': '1024 Billiard Avenue'},
-                           {'Name': 'Mike', 'School': 'Law', 
-                            'Location': 'Fraternity House #22'},
-                           {'Name': 'Ali', 'School': 'Engineering', 
-                            'Location': '512 Wilson Crescent'}])
+staff_df = pd.DataFrame([{'Name': 'ArvinA', 'Role': 'Director of HR', 
+                          'Location': 'Moallem'},
+                         {'Name': 'Ali', 'Role': 'Course director', 
+                          'Location': 'Berlin'},
+                         {'Name': 'Amir', 'Role': 'Grader', 
+                          'Location': 'Lakani'}])
+student_df = pd.DataFrame([{'Name': 'Amir', 'School': 'Business', 
+                            'Location': 'Takhti'},
+                           {'Name': 'Yasin', 'School': 'Law', 
+                            'Location': 'Bisotoon'},
+                           {'Name': 'ArvinA', 'School': 'Engineering', 
+                            'Location': 'Toshiba'}])
 
 
 
-staff_df = pd.DataFrame([{'First Name': 'Abolfazl', 'Last Name': 'Haghparasti', 
+staff_df = pd.DataFrame([{'First Name': 'Delaram', 'Last Name': 'Amini', 
                           'Role': 'Director of HR'},
-                         {'First Name': 'Ali', 'Last Name': 'Darvishi', 
+                         {'First Name': 'Arvin', 'Last Name': 'Bateni', 
                           'Role': 'Course liasion'},
-                         {'First Name': 'Kiyan', 'Last Name': 'Rahmani', 
-                          'Role': 'Grader'}])
-student_df = pd.DataFrame([{'First Name': 'Kiyan', 'Last Name': 'Akbari', 
+                         {'First Name': 'Arvin', 'Last Name': 'Amini', 
+                          'Role': 'Officer'}])
+student_df = pd.DataFrame([{'First Name': 'Arvin', 'Last Name': 'Amini', 
                             'School': 'Business'},
-                           {'First Name': 'Amir', 'Last Name': 'Heydari', 
+                           {'First Name': 'Arian', 'Last Name': 'Gholami', 
                             'School': 'Law'},
-                           {'First Name': 'Ali', 'Last Name': 'Darvishi', 
+                           {'First Name': 'Yasin', 'Last Name': 'Kargar', 
                             'School': 'Engineering'}])
 
 
-df_2011 = pd.read_csv("MERGED2011_PP.csv")
-df_2012 = pd.read_csv("MERGED2012_PP.csv")
-df_2013 = pd.read_csv("MERGED2013_PP.csv")
+data_2011 = {
+    "UNITID": range(1001, 1011),
+    "INSTNM": [f"University_{i}" for i in range(1, 11)],
+    "STATE": ["CA", "NY", "TX", "FL", "IL"] * 2,
+    "ADM_RATE": [0.55, 0.60, 0.45, 0.70, 0.50] * 2,
+    "GRAD_RATE": [0.65, 0.68, 0.60, 0.72, 0.66] * 2,
+    "MEDIAN_DEBT": [18000, 20000, 22000, 21000, 19000] * 2,
+}
+df_2011 = pd.DataFrame(data_2011)
+df_2011["YEAR"] = 2011
+
+
+data_2012 = {
+    "UNITID": range(1001, 1011),
+    "INSTNM": [f"University_{i}" for i in range(1, 11)],
+    "STATE": ["CA", "NY", "TX", "FL", "IL"] * 2,
+    "ADM_RATE": [0.58, 0.62, 0.48, 0.72, 0.52] * 2,
+    "GRAD_RATE": [0.67, 0.70, 0.62, 0.74, 0.68] * 2,
+    "MEDIAN_DEBT": [18500, 20500, 22500, 21500, 19500] * 2,
+}
+df_2012 = pd.DataFrame(data_2012)
+df_2012["YEAR"] = 2012
+
+data_2013 = {
+    "UNITID": range(1001, 1011),
+    "INSTNM": [f"University_{i}" for i in range(1, 11)],
+    "STATE": ["CA", "NY", "TX", "FL", "IL"] * 2,
+    "ADM_RATE": [0.60, 0.65, 0.50, 0.75, 0.55] * 2,
+    "GRAD_RATE": [0.70, 0.72, 0.65, 0.77, 0.70] * 2,
+    "MEDIAN_DEBT": [19000, 21000, 23000, 22000, 20000] * 2,
+}
+df_2013 = pd.DataFrame(data_2013)
+df_2013["YEAR"] = 2013
+
+
+
+data = row[['POPESTIMATE2010',
+                'POPESTIMATE2011',
+                'POPESTIMATE2012',
+                'POPESTIMATE2013',
+                'POPESTIMATE2014',
+                'POPESTIMATE2015']]
+
 
 
 
